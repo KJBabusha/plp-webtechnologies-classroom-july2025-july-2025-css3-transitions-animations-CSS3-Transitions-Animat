@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>CSS3 Transitions and Animations with JS</title>
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <h1>Combined Animations & Transitions</h1>
+            <p>Hover over the card and button to see the effects:</p>
+        </header>
+        <div class="flex-card">
+            <div class="card" id="flipCard">
+                <div class="card-img"></div>
+                <div class="card-content">
+                    <h3>Animated Card</h3>
+                    <p>This card uses both CSS animation and transition effects.</p>
+                    <a href="#" class="btn1">Hover Me</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"></div>
+                <div class="card-content">
+                    <h3>Animated Card</h3>
+                    <p>This card uses both CSS animation and transition effects.</p>
+                    <a href="#" class="btn1">Hover Me</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"></div>
+                <div class="card-content">
+                    <h3>Animated Card</h3>
+                    <p>This card uses both CSS animation and transition effects.</p>
+                    <a href="#" class="btn1">Hover Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container demo-section">
+        <header>
+            <h1>JavaScript Functions</h1>
+            <p class="subtitle">Scope, Parameters & Return Values</p>
+        </header>
+        <div class="demo-area">
+            <h2>Interactive Demonstration</h2>
+            <div class="interactive-demo">
+                <h3>Function Parameters & Return Values</h3>
+                <div class="input-group">
+                    <label for="num1">Enter First number:</label>
+                    <input type="number" id="num1" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="num2">Enter Second number:</label>
+                    <input type="number" id="num2" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="operation">Select Operation</label>
+                    <select id="operation">
+                        <option value="add">Add</option>
+                        <option value="subtract">Subtract</option>
+                        <option value="multiply">Multiply</option>
+                        <option value="divide">Divide</option>
+                    </select>
+                </div>
+                <button onclick="calculate()">Calculate</button>
+
+                <div class="result" id="calcResult">
+                    Result Will appear here😁:
+                </div>
+            </div>
+            <div class="interactive-demo">
+                <h3>Scope Demonstration</h3>
+                <div class="scope-demo">
+                    <div class="scope-box global">
+                        <h4>Global Scope</h4>
+                        <p id="globalScope">Initial value</p>
+                    </div>
+                    <div class="scope-box local">
+                        <h4>Local Scope</h4>
+                        <p id="localScope">Initial value</p>
+                    </div>
+                </div>
+                <button class="small" onclick="demoScope()">Run Scope Demo</button>
+                <button class="small" onclick="tryAccessLocal()">Try to Access Local Variable</button>
+
+                <div class="result" id="scopeResult">
+                    Scope demonstration results will appear here
+                </div>
+            </div>
+        </div>
+        <div class="interactive-demo">
+            <h3>Animation with Functions</h3>
+
+            <div class="animation-box " id="animationBox">
+                <div class="shape circle" id="circle">
+                </div>
+                <div class="shape square" id="square">
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="color">Select color:</label>
+                <select id="color">
+                    <option value="#3498db">Blue</option>
+                    <option value="#e74c3c">Red</option>
+                    <option value="#2ecc71">Green</option>
+                    <option value="#f39c12">Orange</option>
+                    <option value="#9b59b6">Purple</option>
+                </select>
+            </div>
+
+            <button class="small" onclick="changeColor()">Change Color</button>
+            <button class="small" onclick="moveShapes()">Move Shapes</button>
+            <button class="small" onclick="resetAnimation()">Reset</button>
+
+        </div>
+    </section>
+    <section class="container demo-section">
+        <header>
+            <h1>CSS Animations + JavaScript</h1>
+            <p class="subtitle">Triggering CSS animations dynamically with JavaScript</p>
+        </header>
+        <div class="demo-grid">
+            <!-- flip-paper -->
+            <div class="demo-paper">
+                <h2 class="paper-title">Flip Paper Animation</h2>
+                <div class="paper-container">
+                    <div class="paper" id="flipPaper">
+                        <div class="paper-face paper-front">Front</div>
+                        <div class="paper-face paper-back">Back</div>
+                    </div>
+                    
+                </div>
+                <button class="btn "  onclick="flipPaper()">Flip Card</button>
+            </div>
+            <!-- PaperBox Animation -->
+            <div class="demo-paper">
+                <h2 class="paper-title">PaperBox Animation</h2>
+                <div class="paper-box" id="paperBox">Hello</div>
+                <div class="anime-cntrl"><button class="btn" onclick="paperBox('bounce')">Bounce</button>
+                    <button class="btn btn-secondary" onclick="paperBox('shake')">Shake</button>
+                    <button class="btn btn-secondary" onclick="paperBox('pulse')">Pulse</button>
+                </div>
+            </div>
+
+            <!-- Loading Animation Demo -->
+            <div class="demo-paper">
+                <h2 class="paper-title">Loading Animation</h2>
+                <div class="loader" id="loader">
+                    <div class="loader-circle"></div>
+                    <div class="loader-circle"></div>
+                    <div class="loader-circle"></div>
+                </div>
+                <div class="anime-cntrl">
+                    <button class="btn" onclick="toggleLoader('start')">Start Loading</button>
+                    <button class="btn btn-warning" onclick="toggleLoader('stop')">Stop Loading</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="footer">
+        <p>JavaScript Functions Tutorial - Demonstrating Scope, Parameters & Return Values</p>
+    </div>
+
+
+    <script src="JS/script.js"></script>
+
+</body>
+
+</html>
